@@ -1,0 +1,10 @@
+[job_builder]
+ignore_cache=True
+keep_descriptions=False
+include_path=:scripts
+allow_duplicates=False
+
+[jenkins]
+user=<username>
+password=<api token for the user>
+url=<jenkins url>
