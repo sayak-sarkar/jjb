@@ -1,0 +1,5 @@
+- builder:
+    name: execute-script
+    builders:
+        - shell: 'echo "hello JJB!"'
+        
