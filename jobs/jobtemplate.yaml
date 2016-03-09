@@ -1,0 +1,12 @@
+- job-template:
+    name: test-myname-{env}
+    project-type: freestyle
+    description: 'Created by Jenkins Job Builder, do not edit from the Jenkins Dashboard'
+
+- project:
+    name: project-name
+    env:
+        - stage
+        - prod
+    jobs:
+        - test-myname-{env}
