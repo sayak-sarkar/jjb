@@ -1,0 +1,5 @@
+- job:
+    name: test-myname
+    project-type: freestyle
+    description: 'Created by Jenkins Job Builder, do not edit from the Jenkins Dashboard'
+    
