@@ -4,3 +4,16 @@
     description: 'Created by Jenkins Job Builder, do not edit from the Jenkins Dashboard'
     builders: 
         - execute-script
+
+- job:
+    name: another_job
+    scm:
+        - new_scm
+    builders:
+        - include-script
+    parameters:
+        - url_parameter
+    wrappers:
+        - my_wrappers
+    publishers:
+        - test_publisher

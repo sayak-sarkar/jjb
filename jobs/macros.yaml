@@ -6,4 +6,35 @@
 - builder:
     name: include-script
     builders:
-        - !include-raw: automation.sh
+        - shell:
+            !include-raw: 'automation.sh'
+
+- scm:
+    name: new_scm
+    scm:
+      - git:
+         url: ssh://abc.git
+         branches:
+          - origin/master
+
+- parameter:
+    name: url_parameter
+    parameters:
+      - string:
+          name: url
+
+- wrapper:
+    name: my_wrappers
+    wrappers:
+      - config-file-provider:
+            files:
+                - file-id: org.jenkinsci.plugins.configfiles.custom.CustomConfig123
+                  variable: CONFIG_FILE
+
+- publisher:
+    name: test_publisher
+    publishers:
+      - archive:
+            artifacts: 'tests*.log'
+      - email:
+            recipients: example@example.com
