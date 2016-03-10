@@ -2,4 +2,8 @@
     name: execute-script
     builders:
         - shell: 'echo "hello JJB!"'
-        
+
+- builder:
+    name: include-script
+    builders:
+        - !include-raw: automation.sh
