@@ -13,7 +13,7 @@
     name: new_scm
     scm:
       - git:
-         url: ssh://abc.git
+         url: https://github.com/anarang/helloworld.git
          branches:
           - origin/master
 
